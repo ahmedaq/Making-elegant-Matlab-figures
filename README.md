@@ -2,8 +2,8 @@
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB
 
 ## Table of Contents
-*  [Box plot (`figure_boxplot.m`)](#boxplot)
-*  [Violin plot](#violinplot)
+*  [Boxplot (`figure_boxplot.m`)](#boxplot)
+*  [Violinplot](#violinplot)
 
 ## Boxplot
 (`figure_boxplot.m`)
@@ -50,5 +50,5 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot2.png "Boxplot example 2"
 
-## 2. Violinplot
+## Violinplot
 In progress ...
