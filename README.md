@@ -3,9 +3,10 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Box plot (`figure_boxplot.m`)](#boxplot)
-*  [Violin plot (In progress)](#violinplot)
+*  [Violin plot](#violinplot)
 
-## Box plot (`figure_boxplot.m`)
+## Boxplot
+(`figure_boxplot.m`)
 
 ### Example 1: A figure with only data input and no other specification
 ```
@@ -49,4 +50,5 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot2.png "Boxplot example 2"
 
-## 2. Violin plot (In progress)
+## 2. Violinplot
+In progress ...
