@@ -2,10 +2,10 @@
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB
 
 ## Table of Contents
-1.  [Box plot](#boxplot)
-2.  [Violin plot](#violinplot)
+*  [Box plot](#boxplot)
+*  [Violin plot](#violinplot)
 
-## 1. Box plot (`figure_boxplot.m`)
+## Box plot (`figure_boxplot.m`)
 
 #### Example 1: A figure with only data input and no other specification
 ```
