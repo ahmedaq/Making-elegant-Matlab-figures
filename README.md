@@ -22,7 +22,7 @@ figure_boxplot(data)
 ```
 ![alt text][boxplot1]
 
-[boxplot1]: https://github.com/ahmedaq/RoCA/blob/master/html/boxplot1.png "Boxplot example 1"
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot1.png "Boxplot example 1"
 
 ### Example 2
 A figure with only data input and minimum input specifications
@@ -44,6 +44,6 @@ label_boxes = {'alpha','beta','gamma','delta','epsilon','zeta'};
 figure_boxplot(data,label_axes,label_boxes);
 
 ```
-![alt text][boxplot1]
+![alt text][boxplot2]
 
-[boxplot1]: https://github.com/ahmedaq/RoCA/blob/master/html/boxplot1.png "Boxplot example 1"
+[boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot2.png "Boxplot example 2"
