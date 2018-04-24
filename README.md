@@ -1,4 +1,4 @@
-# Making-elegant-Matlab-figures (in progress)
+# Making Elegant Matlab Figures (in progress)
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB
 
 ## 1. Boxplot (`figure_boxplot.m`)
