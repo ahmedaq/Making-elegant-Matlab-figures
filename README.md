@@ -7,7 +7,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Box plot (`figure_boxplot.m`)
 
-#### Example 1: A figure with only data input and no other specification
+### Example 1: A figure with only data input and no other specification
 ```
 % Number of intended boxes in the figure
 num_boxes = 8;          
@@ -26,7 +26,7 @@ figure_boxplot(data)
 
 [boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot1.png "Boxplot example 1"
 
-#### Example 2: A figure with data input and minimum input specifications
+### Example 2: A figure with data input and minimum input specifications
 ```
 % Number of intended boxes in the figure
 num_boxes = 6;          
