@@ -6,7 +6,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 *  [Violinplot](#violinplot)
 
 ## Boxplot
-(`figure_boxplot.m`)
+Function: `figure_boxplot.m`
 
 ### Example 1: A figure with only data input and no other specification
 ```
