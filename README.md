@@ -22,7 +22,7 @@ figure_boxplot(data)
 
 [boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot1.png "Boxplot example 1"
 
-## Example 2: A figure with data input and minimum input specifications
+#### Example 2: A figure with data input and minimum input specifications
 ```
 % Number of intended boxes in the figure
 num_boxes = 6;          
