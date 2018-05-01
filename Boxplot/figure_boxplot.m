@@ -7,9 +7,9 @@ function bh = figure_boxplot(data_cell,...
     savefig_in,savefig_name_in,fig_width_cm_in,fig_height_cm_in,...
     ylim_min_in,ylim_max_in)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Adaption of MATLAB boxplot function to plot beautiful publication-quality boxplots easily
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adaption of MATLAB boxplot function to plot elegant publication-quality boxplots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Written by: Ahmed Abdul Quadeer
@@ -136,7 +136,7 @@ color_scheme_npg = [...
     0.5686    0.8196    0.7608; ...
     0.8627         0         0; ...
     0.4941    0.3804    0.2824; ...
-    0.6902    0.6118    0.5216 ];
+    0.6902    0.6118    0.5216];
 
 %% Processing with respect to number of input arguments
 
