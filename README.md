@@ -3,6 +3,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
+*  [GeneratePDF (`generatePDF.m`)](#generatepdf)
 *  [Violinplot](#violinplot)
 
 ## Boxplot
@@ -25,7 +26,7 @@ figure_boxplot(data)
 ```
 ![alt text][boxplot1]
 
-[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot1.png "Boxplot example 1"
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot1.png "Boxplot example 1"
 
 ### Example 2: A figure with data input and minimum input specifications
 ```
@@ -48,7 +49,31 @@ figure_boxplot(data,label_axes,label_boxes);
 ```
 ![alt text][boxplot2]
 
-[boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/boxplot2.png "Boxplot example 2"
+[boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot2.png "Boxplot example 2"
+
+## GeneratePDF
+Function: `generatePDF.m`
+
+### Example 1: A figure with only data input and no other specification
+```
+% Number of intended boxes in the figure
+num_boxes = 8;          
+
+% Generating random data
+data = cell(1,num_boxes);   
+for k = 1:num_boxes
+    data{k} = randi(10) + randn(1,1000);
+end
+
+% Using the "figure_boxplot" function to plot the boxplot figure using the data
+
+figure_boxplot(data)
+```
+![alt text][boxplot1]
+
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot1.png "Boxplot example 1"
+
+### Example 2: A figure with data input and minimum input specifications
 
 ## Violinplot
 In progress ...
