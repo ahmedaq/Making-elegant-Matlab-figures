@@ -121,15 +121,11 @@ x = randn(1,5000);
 no_of_bins = [20 30 50];
 
 figure;
-subplot(3,1,1)
-generatePDF(x,color_scheme_set1(2,:),'hist',no_of_bins(1)) 
-title('Bins = 25')
-subplot(3,1,2)
-generatePDF(x,color_scheme_set1(2,:),'hist',no_of_bins(2)) 
-title('Bins = 50')
-subplot(3,1,3)
-generatePDF(x,color_scheme_set1(2,:),'hist',no_of_bins(3)) 
-title('Bins = 100')
+for k = 1:3
+    subplot(3,1,k)
+    generatePDF(x,color_scheme_set1(2,:),'hist',no_of_bins(k))
+    title(sprintf('Bins = %d',no_of_bins(k)))
+end
 ```
 ![alt text][generatePDF4]
 
