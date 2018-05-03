@@ -198,6 +198,74 @@ generatePDF(x,color_scheme_set1(3,:),'area',no_of_bins,...
 
 [generatePDF6]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF6.png "GeneratePDF example 6"
 
+### Example 7: Generating overlapping PDFs with different color schemes
+```
+% Loading colors
+run colors_definitions.m
+
+% Generating random data
+num_samples = 2e4;
+
+x(1,:) = randn(1,num_samples); 
+x(2,:) = 2 + 1.25 * randn(1,num_samples); 
+x(3,:) = 4 + randn(1,num_samples); 
+x(4,:) = 6 + 0.9 * randn(1,num_samples); 
+x(5,:) = 8 + 1.5 * randn(1,num_samples); 
+x(6,:) = 10 + 0.9 * randn(1,num_samples); 
+x(7,:) = 13 + 1.1 * randn(1,num_samples); 
+x(8,:) = 16 + 0.9 * randn(1,num_samples); 
+
+figure;
+subplot(5,1,1)
+for k = 1:8
+    generatePDF(x(k,:),color_scheme_npg(k,:),'area')
+    hold on
+end
+title('NPG color scheme')
+legend('Data 1','Data 2','Data 3',...
+    'Data 4','Data 5','Data 6',...
+    'Data 7','Data 8','Location','NorthWest'); legend boxoff
+subplot(5,1,2)
+for k = 1:8
+    generatePDF(x(k,:),color_scheme_aaas(k,:),'area')
+    hold on
+end
+title('AAAS color scheme')
+legend('Data 1','Data 2','Data 3',...
+    'Data 4','Data 5','Data 6',...
+    'Data 7','Data 8','Location','NorthWest'); legend boxoff
+subplot(5,1,3)
+for k = 1:8
+    generatePDF(x(k,:),color_scheme_nejm(k,:),'area')
+    hold on
+end
+title('NEJM color scheme')
+legend('Data 1','Data 2','Data 3',...
+    'Data 4','Data 5','Data 6',...
+    'Data 7','Data 8','Location','NorthWest'); legend boxoff
+subplot(5,1,4)
+for k = 1:8
+    generatePDF(x(k,:),color_scheme_lancet(k,:),'area')
+    hold on
+end
+title('Lancet color scheme')
+legend('Data 1','Data 2','Data 3',...
+    'Data 4','Data 5','Data 6',...
+    'Data 7','Data 8','Location','NorthWest'); legend boxoff
+subplot(5,1,5)
+for k = 1:8
+    generatePDF(x(k,:),color_scheme_set1(k,:),'area')
+    hold on
+end
+title('Set1 color scheme (Brewermap)')
+legend('Data 1','Data 2','Data 3',...
+    'Data 4','Data 5','Data 6',...
+    'Data 7','Data 8','Location','NorthWest'); legend boxoff
+```
+![alt text][generatePDF7]
+
+[generatePDF7]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF7.png "GeneratePDF example 7"
+
 ---
 
 ## Violinplot
