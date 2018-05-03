@@ -215,52 +215,28 @@ x(6,:) = 10 + 0.9 * randn(1,num_samples);
 x(7,:) = 13 + 1.1 * randn(1,num_samples); 
 x(8,:) = 16 + 0.9 * randn(1,num_samples); 
 
+no_color_schemes = 5;
+color_scheme{1} = color_scheme_npg;
+color_scheme{2} = color_scheme_aaas;
+color_scheme{3} = color_scheme_nejm;
+color_scheme{4} = color_scheme_lancet;
+color_scheme{5} = color_scheme_set1;
+
+titles_cell = {'NPG color scheme','AAAS color scheme',...
+    'NEJM color scheme','LANCET color scheme','Set1 (Brewermap) color scheme'};
+
 figure;
-subplot(5,1,1)
-for k = 1:8
-    generatePDF(x(k,:),color_scheme_npg(k,:),'area')
-    hold on
+for m = 1:no_color_schemes
+    subplot(no_color_schemes,1,m)
+    for k = 1:8
+        generatePDF(x(k,:),color_scheme{m}(k,:),'area')
+        hold on
+    end
+    title(titles_cell{m})
+    legend('Data 1','Data 2','Data 3',...
+        'Data 4','Data 5','Data 6',...
+        'Data 7','Data 8','Location','NorthWest'); legend boxoff
 end
-title('NPG color scheme')
-legend('Data 1','Data 2','Data 3',...
-    'Data 4','Data 5','Data 6',...
-    'Data 7','Data 8','Location','NorthWest'); legend boxoff
-subplot(5,1,2)
-for k = 1:8
-    generatePDF(x(k,:),color_scheme_aaas(k,:),'area')
-    hold on
-end
-title('AAAS color scheme')
-legend('Data 1','Data 2','Data 3',...
-    'Data 4','Data 5','Data 6',...
-    'Data 7','Data 8','Location','NorthWest'); legend boxoff
-subplot(5,1,3)
-for k = 1:8
-    generatePDF(x(k,:),color_scheme_nejm(k,:),'area')
-    hold on
-end
-title('NEJM color scheme')
-legend('Data 1','Data 2','Data 3',...
-    'Data 4','Data 5','Data 6',...
-    'Data 7','Data 8','Location','NorthWest'); legend boxoff
-subplot(5,1,4)
-for k = 1:8
-    generatePDF(x(k,:),color_scheme_lancet(k,:),'area')
-    hold on
-end
-title('Lancet color scheme')
-legend('Data 1','Data 2','Data 3',...
-    'Data 4','Data 5','Data 6',...
-    'Data 7','Data 8','Location','NorthWest'); legend boxoff
-subplot(5,1,5)
-for k = 1:8
-    generatePDF(x(k,:),color_scheme_set1(k,:),'area')
-    hold on
-end
-title('Set1 color scheme (Brewermap)')
-legend('Data 1','Data 2','Data 3',...
-    'Data 4','Data 5','Data 6',...
-    'Data 7','Data 8','Location','NorthWest'); legend boxoff
 ```
 ![alt text][generatePDF7]
 
