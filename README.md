@@ -72,7 +72,7 @@ figure_boxplot(data)
 
 [boxplot3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot3.png "Boxplot example 3"
 
-------------
+---
 
 ## GeneratePDF
 Function: `generatePDF.m`
@@ -197,6 +197,8 @@ generatePDF(x,color_scheme_set1(3,:),'area',no_of_bins,...
 ![alt text][generatePDF6]
 
 [generatePDF6]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF6.png "GeneratePDF example 6"
+
+---
 
 ## Violinplot
 In progress ...
