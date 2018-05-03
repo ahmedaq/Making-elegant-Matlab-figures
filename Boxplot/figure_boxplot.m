@@ -1,4 +1,4 @@
-function bh = figure_boxplot(data_cell,...
+function bh = figure_boxplot(data_input,...
     text_label_in,label_xaxis_data_in,text_title_in,label_orientation_choice_in,...
     box_color_in,box_lineWidth_in,box_widths_value_in,box_color_transparency_in,...
     median_lineWidth_in,median_color_in,...
@@ -7,9 +7,9 @@ function bh = figure_boxplot(data_cell,...
     savefig_in,savefig_name_in,fig_width_cm_in,fig_height_cm_in,...
     ylim_min_in,ylim_max_in)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Adaption of MATLAB boxplot function to plot elegant publication-quality boxplots
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adaption of MATLAB boxplot function to plot beautiful publication-quality boxplots easily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Written by: Ahmed Abdul Quadeer
@@ -20,10 +20,12 @@ function bh = figure_boxplot(data_cell,...
 %
 % Inputs:   
 %
-% - data_cell: Input data       
-%   N-length cell including data, with each cell having data of one boxplot 
-%   to be compared. G matrix to be used in the default MATLAB "boxplot" 
-%   function is generated accordingly.  
+% - data_input: Input data       
+%   * N-length cell including data, with each cell having data of one boxplot 
+%     to be compared. G matrix to be used in the default MATLAB "boxplot" 
+%     function is generated accordingly.
+%   * a matrix of size MxN, where M = no. of observation and N = no. of
+%     variables. Boxplot is made for each variable (column) of input matrix
 %
 % - text_label_in: Labels for x-axis and y-axis
 %   Cell of length 2, with first cell having text of x-axis label and 
@@ -136,14 +138,21 @@ color_scheme_npg = [...
     0.5686    0.8196    0.7608; ...
     0.8627         0         0; ...
     0.4941    0.3804    0.2824; ...
-    0.6902    0.6118    0.5216];
+    0.6902    0.6118    0.5216 ];
 
 %% Processing with respect to number of input arguments
+
+%Number of boxplots
+if iscell(data_input) %if input data is in cell form
+    no_boxplots = length(data_input);
+else                  %if input data is in matrix form
+    no_boxplots = size(data_input,2);
+end
 
 %Defaults
 box_lineWidth = 0.5;
 box_widths_value = 0.3;
-box_color = color_scheme_npg(1:length(data_cell),:);
+box_color = color_scheme_npg(1:no_boxplots,:);
 box_color_transparency = 0.7; %faceAlpha
 median_lineWidth = 2;
 median_color = 'k';
@@ -153,7 +162,7 @@ outlier_markerSize = 4;
 outlier_marker_edgeWidth = 0.1;
 outlier_marker_edgeColor = 'w';
 outlier_jitter_value = 0.3;
-label_xaxis_data = 1:length(data_cell);
+label_xaxis_data = 1:no_boxplots;
 text_label{1} = '';
 text_label{2} = '';
 text_title = '';
@@ -441,7 +450,7 @@ elseif nargin == 23
     ylim_max = ylim_max_in;
 end
 
-if length(data_cell)>9 || isempty(data_cell)
+if no_boxplots>9 || isempty(data_input)
     error('Error! The number of box plots to be plotted is greater than colors in the selected scheme. Specify a color vector.')
 end
 
@@ -449,17 +458,19 @@ end
 
 data = [];
 G = [];
-% if ~iscell(data_cell) %each box plot data should be in row!
-%     for kk = 1:size(data_cell,1)
-%         data = [data data_cell(kk,:)];
-%         G = [G kk*ones(1,size(data_cell,2))];
-%     end
-% else
-for kk = 1:length(data_cell)
-    data = [data data_cell{kk}];
-    G = [G kk*ones(1,length(data_cell{kk}))];
+if ~iscell(data_input)   %if input data is in matrix form
+    for kk = 1:size(data_input,2)
+        data_temp = data_input(:,kk);
+        data = [data data_temp.'];
+        G = [G kk*ones(1,size(data_input,1))];
+    end
+else                      %if input data is in cell form
+    for kk = 1:no_boxplots
+        data_temp = data_input{kk};
+        data = [data data_temp(:).'];
+        G = [G kk*ones(1,length(data_input{kk}))];
+    end
 end
-% end
 
 %% Main box plot
 
@@ -516,15 +527,14 @@ end
 h=findobj(gca,'tag','Outliers');
 for kk = 1:length(h)
     if size(box_color,1) ~= 1   %if colors provided for each box
-        h(kk).MarkerFaceColor = box_color(length(h)-kk+1,:);
+        h(kk).MarkerFaceColor = box_color(length(h)-kk+1,:); alpha(box_color_transparency)
     else
-        h(kk).MarkerFaceColor = box_color;
+        h(kk).MarkerFaceColor = box_color; alpha(box_color_transparency)
     end
     h(kk).MarkerEdgeColor = outlier_marker_edgeColor;
     h(kk).MarkerSize = outlier_markerSize;
     h(kk).LineWidth = outlier_marker_edgeWidth;
 end
-alpha(h,box_color_transparency)
 
 % ylim([ylim_min ylim_max])
 
