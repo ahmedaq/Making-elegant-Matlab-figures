@@ -72,6 +72,8 @@ figure_boxplot(data)
 
 [boxplot3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot3.png "Boxplot example 3"
 
+------------
+
 ## GeneratePDF
 Function: `generatePDF.m`
 
