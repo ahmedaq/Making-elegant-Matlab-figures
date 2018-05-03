@@ -215,6 +215,7 @@ x(6,:) = 10 + 0.9 * randn(1,num_samples);
 x(7,:) = 13 + 1.1 * randn(1,num_samples); 
 x(8,:) = 16 + 0.9 * randn(1,num_samples); 
 
+% Color schemes to test
 no_color_schemes = 5;
 color_scheme{1} = color_scheme_npg;
 color_scheme{2} = color_scheme_aaas;
@@ -222,7 +223,7 @@ color_scheme{3} = color_scheme_nejm;
 color_scheme{4} = color_scheme_lancet;
 color_scheme{5} = color_scheme_set1;
 
-titles_cell = {'NPG color scheme','AAAS color scheme',...
+titles_schemes = {'NPG color scheme','AAAS color scheme',...
     'NEJM color scheme','LANCET color scheme','Set1 (Brewermap) color scheme'};
 
 figure;
@@ -232,7 +233,7 @@ for m = 1:no_color_schemes
         generatePDF(x(k,:),color_scheme{m}(k,:),'area')
         hold on
     end
-    title(titles_cell{m})
+    title(titles_schemes{m})
     legend('Data 1','Data 2','Data 3',...
         'Data 4','Data 5','Data 6',...
         'Data 7','Data 8','Location','NorthWest'); legend boxoff
