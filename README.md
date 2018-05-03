@@ -51,6 +51,27 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot2.png "Boxplot example 2"
 
+### Example 3: A figure with only data input-in a matrix form of size *num_samples x num_boxes*-and no other specification
+```
+% Number of intended boxes in the figure
+num_boxes = 7;  
+% Number of samples in each box plot
+num_samples = 1000;
+
+% Generating random data
+data = zeros(num_samples,num_boxes);   
+for k = 1:num_boxes
+    data(:,k) = randi(10) + randn(num_samples,1);
+end
+
+% Using the "figure_boxplot.m" function to plot the boxplot figure using the data
+
+figure_boxplot(data)
+```
+![alt text][boxplot3]
+
+[boxplot3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot3.png "Boxplot example 3"
+
 ## GeneratePDF
 Function: `generatePDF.m`
 
