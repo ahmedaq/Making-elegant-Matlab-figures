@@ -7,6 +7,9 @@ A repository comprising multiple functions for making elegant publication-qualit
 *  [Violinplot](#violinplot)
 
 ## Boxplot
+Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cumbersome due to the large number of required (and somewhat strict in terms of format) inputs. Here, I have written a wrapper code for making nice boxplots quickly and efficiently.
+
+
 Function: `figure_boxplot.m`
 
 ### Example 1: A figure with only data input and no other specification
@@ -75,6 +78,9 @@ figure_boxplot(data)
 ---
 
 ## GeneratePDF
+
+This is a code to generate nice (properly normalized) probability density function (PDF) plots with minimum amount of input arguments. 
+
 Function: `generatePDF.m`
 
 ### Example 1: Generating PDF with only data input
