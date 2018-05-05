@@ -4,6 +4,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
+*  [Heatmap (`figure_heatmap.m`)](#heatmap)
 *  [Violinplot](#violinplot)
 
 ## Boxplot
@@ -248,6 +249,29 @@ end
 ![alt text][generatePDF7]
 
 [generatePDF7]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF7.png "GeneratePDF example 7"
+
+---
+## Heatmap
+Generating heatmap in MATLAB using the default function `heatmap.m` (introduced in version 2017a) is quite useful for visualizing the magnitude of elements in matrices. However, the size of the generated heatmaps requires a lot of tweaking to produce a reasonable figure. Here, I have written a wrapper code for making nice appropriate-sized heatmaps quickly and efficiently with minimum input.
+
+
+Function: `figure_heatmap.m`
+
+### Example 1: Heatmap using only the input data
+```
+% Generating data
+x = randn(10,5);
+C = corrcoef(x);
+
+% Heatmap figure
+figure;
+figure_heatmap(C);
+```
+![alt text][heatmap1]
+
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
+
+
 
 ---
 
