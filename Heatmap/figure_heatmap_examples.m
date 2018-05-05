@@ -54,7 +54,7 @@ print('heatmap_example4','-dpng','-r300')
 %% Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes
 
 % Generating rectangular matrix data
-X = randn(10,3);
+X = randn(10,6);
 colorscheme = 'YlOrRd';
 text_title = 'Rectangular Matrix';
 text_labels = {'Variable 1','Variable 2'};

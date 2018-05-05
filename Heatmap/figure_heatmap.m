@@ -55,7 +55,7 @@ set(0,'DefaultTextFontSize',8)
 %% Defaults
 
 %Brewermap add-on is required for defining colormaps
-color_scheme = brewermap(100,'OrRd');
+color_scheme = brewermap(100,'RdPu');
 % 'YlOrRd','BuPu', and 'BuGn' are nice as well
 text_title = ' ';
 text_labels{1} = ' ';
