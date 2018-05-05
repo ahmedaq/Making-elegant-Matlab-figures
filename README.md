@@ -327,7 +327,7 @@ figure_heatmap(C,colorscheme,text_title,text_labels,limits_data);
 ### Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes
 ```
 % Generating rectangular matrix data
-X = randn(10,3);
+X = randn(10,6);
 colorscheme = 'YlOrRd';
 %Requires brewermap package
 %Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
