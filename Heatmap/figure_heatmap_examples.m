@@ -55,7 +55,7 @@ print('heatmap_example4','-dpng','-r300')
 
 % Generating rectangular matrix data
 X = randn(10,6);
-colorscheme = 'YlOrRd';
+colorscheme = 'YlGnBu';
 text_title = 'Rectangular Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
