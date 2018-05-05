@@ -3,7 +3,9 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
-    * [Example 1: A figure with only data input and no other specification](#example-1-a-figure-with-only-data-input-and-no-other-specification)
+    * [Example 1: Boxplot with only data input and no other specification](#example-1-boxplot-with-only-data-input-and-no-other-specification)
+    * [Example 2: Boxplot with minimum input specifications](#example-2-boxplot-with-minimum-input-specifications)
+    * [Example 3: Boxplot with data input in matrix format](#example-3-boxplot-with-data-input-in-matrix-format)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
 *  [Violinplot](#violinplot)
@@ -14,7 +16,7 @@ Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cum
 
 Function: `figure_boxplot.m`
 
-### Example 1: A figure with only data input and no other specification
+### Example 1: Boxplot with only data input and no other specification
 ```
 % Number of intended boxes in the figure
 num_boxes = 8;          
@@ -33,7 +35,7 @@ figure_boxplot(data)
 
 [boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot1.png "Boxplot example 1"
 
-### Example 2: A figure with data input and minimum input specifications
+### Example 2: Boxplot with minimum input specifications
 ```
 % Number of intended boxes in the figure
 num_boxes = 6;          
@@ -56,7 +58,11 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot2.png "Boxplot example 2"
 
-### Example 3: A figure with only data input-in a matrix form of size *num_samples x num_boxes*-and no other specification
+### Example 3: Boxplot with data input in matrix format
+
+
+Instead of a cell, the code works even if the input is in matrix form of size *num_samples x num_boxes*. 
+
 ```
 % Number of intended boxes in the figure
 num_boxes = 7;  
