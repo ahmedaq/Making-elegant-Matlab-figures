@@ -8,6 +8,12 @@ A repository comprising multiple functions for making elegant publication-qualit
     * [Example 3: Boxplot with data input in matrix format](#example-3-boxplot-with-data-input-in-matrix-format)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
     * [Example 1: Generating PDF with only data input](#example-1-generating-pdf-with-only-data-input)
+    * [Example 2: Generating PDF in a specified color](#example-2-generating-pdf-in-a-specified-color)
+    * [Example 3: Generating PDFs in different styles ](#example-3-generating-pdfs-in-different-styles)
+    * [Example 4: Generating PDFs with specific number of bins](#example-4-generating-pdfs-with-specific-number-of-bins)
+    * [Example 5: Generating overlapping PDFs](#example-5-generating-overlapping-pdfs)
+    * [Example 6: Generating PDFs and saving figures](#example-6-generating-pdfs-and-saving-figures)
+    * [Example 7: Generating overlapping PDFs with different color schemes](#example-7-generating-overlapping-pdfs-with-different-color-schemes)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
 *  [Violinplot](#violinplot)
 
