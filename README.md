@@ -7,7 +7,7 @@ A repository comprising multiple functions for making elegant publication-qualit
     * [Example 2: Boxplot with minimum input specifications](#example-2-boxplot-with-minimum-input-specifications)
     * [Example 3: Boxplot with data input in matrix format](#example-3-boxplot-with-data-input-in-matrix-format)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
-    * [Example 1: Generating PDF with only data input] (#example-1-generating-pdf-with-only-data-input)
+    * [Example 1: Generating PDF with only data input](#example-1-generating-pdf-with-only-data-input)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
 *  [Violinplot](#violinplot)
 
