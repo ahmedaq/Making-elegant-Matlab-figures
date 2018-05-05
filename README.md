@@ -271,7 +271,123 @@ figure_heatmap(C);
 
 [heatmap1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
 
+### Example 2: Heatmap using the input data and a specific color scheme
+```
+%Using data of example 1
 
+colorscheme = 'BuGn'; 
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+
+% Heatmap figure
+figure;
+figure_heatmap(C,colorscheme);
+```
+![alt text][heatmap2]
+
+[heatmap2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example2.png "Heatmap example 2"
+
+### Example 3: Heatmap with title and labels
+```
+%Using data of example 1
+
+colorscheme = 'BuGn'; 
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+text_title = 'Correlation Matrix';
+text_labels = {'Variable','Variable'};
+
+% Heatmap figure
+figure;
+figure_heatmap(C,colorscheme,text_title,text_labels);
+```
+![alt text][heatmap3]
+
+[heatmap3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example3.png "Heatmap example 3"
+
+### Example 4: Heatmap with limits of colorscheme specified
+```
+%Using data of example 1
+
+colorscheme = 'BuGn'; 
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+text_title = 'Correlation Matrix';
+text_labels = {'Variable','Variable'};
+limits_data = [-1 1]; %for correlation matrix
+
+% Heatmap figure
+figure;
+figure_heatmap(C,colorscheme,text_title,text_labels,limits_data);
+```
+![alt text][heatmap4]
+
+[heatmap4]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example4.png "Heatmap example 4"
+
+### Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes
+```
+% Generating rectangular matrix data
+X = randn(10,3);
+colorscheme = 'YlOrRd';
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+text_title = 'Rectangular Matrix';
+text_labels = {'Variable 1','Variable 2'};
+limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+savefig = 1;
+savefig_name = 'heatmap_example5a';
+
+% Heatmap figure
+figure;
+figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
+    savefig,savefig_name);
+
+%
+Y = randn(11,20);
+colorscheme = 'BuPu';
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+text_title = 'Rectangular Matrix';
+text_labels = {'Variable 1','Variable 2'};
+limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+savefig = 1;
+savefig_name = 'heatmap_example5b';
+
+% Heatmap figure
+figure;
+figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,...
+    savefig,savefig_name);
+
+```
+![alt text][heatmap5a]
+
+[heatmap5a]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example5a.png "Heatmap example 5a"
+
+![alt text][heatmap5b]
+
+[heatmap5b]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example5b.png "Heatmap example 5b"
+
+### Example 6: Heatmap of a big data matrix 
+```
+% Generating rectangular matrix data
+X = randn(15,40);
+colorscheme = 'BuPu';
+%Requires brewermap package
+%Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
+text_title = 'Big Rectangular Matrix';
+text_labels = {'Variable 1','Variable 2'};
+limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+savefig = 1;
+savefig_name = 'heatmap_example6';
+
+% Heatmap figure
+figure;
+figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
+    savefig,savefig_name);
+```
+![alt text][heatmap6]
+
+[heatmap6]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example6.png "Heatmap example 6"
 
 ---
 
