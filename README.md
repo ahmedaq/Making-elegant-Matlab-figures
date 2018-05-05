@@ -3,7 +3,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
-    * [Example 1: A figure with only data input and no other specification](#example-1)
+    * [Example 1: A figure with only data input and no other specification](#example-1:-a-figure-with-only-data-input-and-no-other-specification)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
 *  [Violinplot](#violinplot)
