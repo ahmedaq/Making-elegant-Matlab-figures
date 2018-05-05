@@ -3,9 +3,9 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
-    * [Example 1: Boxplot with only data input and no other specification](#example-1-boxplot-with-only-data-input-and-no-other-specification)
-    * [Example 2: Boxplot with minimum input specifications](#example-2-boxplot-with-minimum-input-specifications)
-    * [Example 3: Boxplot with data input in matrix format](#example-3-boxplot-with-data-input-in-matrix-format)
+    * [Example 1: Boxplot using only data input and no other specification](#example-1-boxplot-using-only-data-input-and-no-other-specification)
+    * [Example 2: Boxplot using minimum input specifications](#example-2-boxplot-using-minimum-input-specifications)
+    * [Example 3: Boxplot using data input in matrix format](#example-3-boxplot-using-data-input-in-matrix-format)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
     * [Example 1: Generating PDF with only data input](#example-1-generating-pdf-with-only-data-input)
     * [Example 2: Generating PDF in a specified color](#example-2-generating-pdf-in-a-specified-color)
@@ -15,6 +15,12 @@ A repository comprising multiple functions for making elegant publication-qualit
     * [Example 6: Generating PDFs and saving figures](#example-6-generating-pdfs-and-saving-figures)
     * [Example 7: Generating overlapping PDFs with different color schemes](#example-7-generating-overlapping-pdfs-with-different-color-schemes)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
+    * [Example 1: Heatmap using only data input](#example-1-heatmap-using-only-data-input)
+    * [Example 2: Heatmap using a specific color scheme](#example-2-heatmap-using-a-specific-color-scheme)    
+    * [Example 3: Heatmap with title and labels](#example-3-heatmap-with-title-and-labels)    
+    * [Example 4: Heatmap with limits of color scheme specified](#example-4-heatmap-with-limits-of-color-scheme-specified)    
+    * [Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes](#example-5-heatmap-of-a-rectangular-matrix-and-automated-saving-of-figure-with-approproate-cell-sizes)    
+    * [Example 6: Heatmap of a big data matrix](#example-6-heatmap-of-a-big-data-matrix)    
 *  [Violinplot](#violinplot)
 
 ## Boxplot
@@ -23,7 +29,7 @@ Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cum
 
 Function: `figure_boxplot.m`
 
-### Example 1: Boxplot with only data input and no other specification
+### Example 1: Boxplot using only data input and no other specification
 ```
 % Number of intended boxes in the figure
 num_boxes = 8;          
@@ -42,7 +48,7 @@ figure_boxplot(data)
 
 [boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot1.png "Boxplot example 1"
 
-### Example 2: Boxplot with minimum input specifications
+### Example 2: Boxplot using minimum input specifications
 ```
 % Number of intended boxes in the figure
 num_boxes = 6;          
@@ -65,7 +71,7 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot2.png "Boxplot example 2"
 
-### Example 3: Boxplot with data input in matrix format
+### Example 3: Boxplot using data input in matrix format
 
 
 Instead of a cell, the code works even if the input is in matrix form of size *num_samples x num_boxes*. 
@@ -271,7 +277,7 @@ Generating heatmap in MATLAB using the default function `heatmap.m` (introduced 
 
 Function: `figure_heatmap.m`
 
-### Example 1: Heatmap using only the input data
+### Example 1: Heatmap using only data input
 ```
 % Generating data
 x = randn(10,5);
@@ -285,7 +291,7 @@ figure_heatmap(C);
 
 [heatmap1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
 
-### Example 2: Heatmap using the input data and a specific color scheme
+### Example 2: Heatmap using a specific color scheme
 ```
 %Using data of example 1
 
@@ -319,7 +325,7 @@ figure_heatmap(C,colorscheme,text_title,text_labels);
 
 [heatmap3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example3.png "Heatmap example 3"
 
-### Example 4: Heatmap with limits of colorscheme specified
+### Example 4: Heatmap with limits of color scheme specified
 ```
 %Using data of example 1
 
