@@ -269,7 +269,7 @@ figure_heatmap(C);
 ```
 ![alt text][heatmap1]
 
-[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
+[heatmap1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
 
 
 
