@@ -7,7 +7,6 @@ x = randn(10,5);
 C = corrcoef(x);
 
 % Heatmap figure
-figure;
 figure_heatmap(C);
 
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 16 12])
@@ -18,7 +17,6 @@ print('heatmap_example1','-dpng','-r300')
 colorscheme = 'BuGn';
 
 % Heatmap figure
-figure;
 figure_heatmap(C,colorscheme);
 
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 16 12])
@@ -31,7 +29,6 @@ text_title = 'Correlation Matrix';
 text_labels = {'Variable','Variable'};
 
 % Heatmap figure
-figure;
 figure_heatmap(C,colorscheme,text_title,text_labels);
 
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 16 12])
@@ -45,7 +42,6 @@ text_labels = {'Variable','Variable'};
 limits_data = [-1 1]; %for correlation matrix
 
 % Heatmap figure
-figure;
 figure_heatmap(C,colorscheme,text_title,text_labels,limits_data);
 
 set(gcf,'PaperUnits','centimeters','PaperPosition',[0 0 16 12])
@@ -63,7 +59,6 @@ savefig = 1;
 savefig_name = 'heatmap_example5a';
 
 % Heatmap figure
-figure;
 figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
     savefig,savefig_name);
 
@@ -77,7 +72,6 @@ savefig = 1;
 savefig_name = 'heatmap_example5b';
 
 % Heatmap figure
-figure;
 figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,...
     savefig,savefig_name);
 
@@ -93,7 +87,6 @@ savefig = 1;
 savefig_name = 'heatmap_example6';
 
 % Heatmap figure
-figure;
 figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
     savefig,savefig_name);
 
