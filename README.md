@@ -18,7 +18,7 @@ A repository comprising multiple functions for making elegant publication-qualit
     * [Example 1: Heatmap using only data input](#example-1-heatmap-using-only-data-input)
     * [Example 2: Heatmap using a specific color scheme](#example-2-heatmap-using-a-specific-color-scheme)    
     * [Example 3: Heatmap with title and labels](#example-3-heatmap-with-title-and-labels)    
-    * [Example 4: Heatmap with limits of color scheme specified](#example-4-heatmap-with-limits-of-color-scheme-specified)    
+    * [Example 4: Heatmap with cell labels and limits of color scheme specified](#example-4-heatmap-with-cell-labels-and-limits-of-color-scheme-specified)    
     * [Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes](#example-5-heatmap-of-a-rectangular-matrix-and-automated-saving-of-figure-with-approproate-cell-sizes)    
     * [Example 6: Heatmap of a big data matrix](#example-6-heatmap-of-a-big-data-matrix)    
 *  [Violinplot](#violinplot)
@@ -325,7 +325,7 @@ figure_heatmap(C,colorscheme,text_title,text_labels);
 
 [heatmap3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example3.png "Heatmap example 3"
 
-### Example 4: Heatmap with limits of color scheme specified
+### Example 4: Heatmap with cell labels and limits of color scheme specified
 ```
 %Using data of example 1
 
@@ -348,10 +348,10 @@ figure_heatmap(C,colorscheme,text_title,text_labels,limits_data);
 ```
 % Generating rectangular matrix data
 X = randn(10,6);
-colorscheme = 'YlOrRd';
+colorscheme = 'YlGnBu';
 %Requires brewermap package
 %Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
-text_title = 'Rectangular Matrix';
+text_title = 'Tall Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
 savefig = 1;
@@ -367,7 +367,7 @@ Y = randn(11,20);
 colorscheme = 'BuPu';
 %Requires brewermap package
 %Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
-text_title = 'Rectangular Matrix';
+text_title = 'Fat Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
 savefig = 1;
@@ -390,7 +390,7 @@ figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,...
 ### Example 6: Heatmap of a big data matrix 
 ```
 % Generating rectangular matrix data
-X = randn(15,40);
+X = randn(15,50);
 colorscheme = 'BuPu';
 %Requires brewermap package
 %Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
