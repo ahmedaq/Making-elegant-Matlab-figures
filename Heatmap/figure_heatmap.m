@@ -1,5 +1,5 @@
 function figure_heatmap(data_input,color_scheme_in,...
-    text_title_in,text_labels_in,limits_data_in,...
+    text_title_in,text_labels_in,limits_data_in,text_labels_cells_in,...
     savefig_in,savefig_name_in)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,6 +36,10 @@ function figure_heatmap(data_input,color_scheme_in,...
 %       * [-1 1] for a correlation matirx
 %       * [0 100] for a matrix showing overlap between different vectors
 %
+% - text_labels_cells: Labels for x-axis and y-axis cells
+%   Cell of length 2, with first cell having a vector of x-axis cell 
+%   labels and second cell having a vector of y-axis cell labels
+%
 % - savefig_in: Option to save figure automatically (in png format)
 %   * 1 - Yes, save the figure
 %   * 0 - No
@@ -60,6 +64,8 @@ color_scheme = brewermap(100,'RdPu');
 text_title = ' ';
 text_labels{1} = ' ';
 text_labels{2} = ' ';
+text_labels_cells{1} = (1:1:size(data_input,1));
+text_labels_cells{2} = (1:1:size(data_input,2));
 limits_data = [round2dp(min(data_input(:)),0) round2dp(max(data_input(:)),0)];
 savefig = 0;
 savefig_name = 'heatmap_example';
@@ -75,21 +81,29 @@ elseif nargin == 4
     color_scheme = brewermap(100,color_scheme_in);
     text_title = text_title_in;
     text_labels = text_labels_in;
-elseif nargin == 5
+elseif nargin == 4
     color_scheme = brewermap(100,color_scheme_in);
     text_title = text_title_in;
-    text_labels = text_labels_in;
+    text_labels = text_labels_in;    
     limits_data = limits_data_in;
 elseif nargin == 6
     color_scheme = brewermap(100,color_scheme_in);
     text_title = text_title_in;
     text_labels = text_labels_in;
+    text_labels_cells = text_labels_cells_in;    
     limits_data = limits_data_in;
-    savefig = savefig_in;
 elseif nargin == 7
     color_scheme = brewermap(100,color_scheme_in);
     text_title = text_title_in;
     text_labels = text_labels_in;
+    text_labels_cells = text_labels_cells_in;    
+    limits_data = limits_data_in;
+    savefig = savefig_in;
+elseif nargin == 8
+    color_scheme = brewermap(100,color_scheme_in);
+    text_title = text_title_in;
+    text_labels = text_labels_in;
+    text_labels_cells = text_labels_cells_in;    
     limits_data = limits_data_in;
     savefig = savefig_in;
     savefig_name = savefig_name_in;
@@ -104,7 +118,7 @@ data_input = round2dp(data_input,2);
 %% Generating heatmap figure
 
 figure;
-heatmap(data_input);
+heatmap(text_labels_cells{1},text_labels_cells{2},data_input);
 title(text_title)
 h = set(gca,'Colormap',color_scheme,'ColorLimits',limits_data);
 xlabel(text_labels{1})
