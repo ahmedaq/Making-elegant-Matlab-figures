@@ -284,7 +284,6 @@ x = randn(10,5);
 C = corrcoef(x);
 
 % Heatmap figure
-figure;
 figure_heatmap(C);
 ```
 ![alt text][heatmap1]
@@ -300,7 +299,6 @@ colorscheme = 'BuGn';
 %Download from https://github.com/DrosteEffect/BrewerMap/blob/master/brewermap.m
 
 % Heatmap figure
-figure;
 figure_heatmap(C,colorscheme);
 ```
 ![alt text][heatmap2]
@@ -318,7 +316,6 @@ text_title = 'Correlation Matrix';
 text_labels = {'Variable','Variable'};
 
 % Heatmap figure
-figure;
 figure_heatmap(C,colorscheme,text_title,text_labels);
 ```
 ![alt text][heatmap3]
@@ -335,10 +332,11 @@ colorscheme = 'BuGn';
 text_title = 'Correlation Matrix';
 text_labels = {'Variable','Variable'};
 limits_data = [-1 1]; %for correlation matrix
+text_labels_cells{1} = {'A','B','C','D','E'}; %x-axis cell labels
+text_labels_cells{2} = {'A','B','C','D','E'}; %y-axis cell labels
 
 % Heatmap figure
-figure;
-figure_heatmap(C,colorscheme,text_title,text_labels,limits_data);
+figure_heatmap(C,colorscheme,text_title,text_labels,limits_data,text_labels_cells);
 ```
 ![alt text][heatmap4]
 
@@ -354,12 +352,13 @@ colorscheme = 'YlGnBu';
 text_title = 'Tall Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+text_labels_cells{1} = 1:size(X,2); %x-axis cell labels
+text_labels_cells{2} = 1:size(X,1); %y-axis cell labels
 savefig = 1;
 savefig_name = 'heatmap_example5a';
 
 % Heatmap figure
-figure;
-figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
+figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cells,...
     savefig,savefig_name);
 
 %
@@ -370,12 +369,14 @@ colorscheme = 'BuPu';
 text_title = 'Fat Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+text_labels_cells{1} = 1:size(Y,2); %x-axis cell labels
+text_labels_cells{2} = 1:size(Y,1); %y-axis cell labels
 savefig = 1;
 savefig_name = 'heatmap_example5b';
 
 % Heatmap figure
 figure;
-figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,...
+figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,text_labels_cells,...
     savefig,savefig_name);
 
 ```
@@ -397,12 +398,13 @@ colorscheme = 'BuPu';
 text_title = 'Big Rectangular Matrix';
 text_labels = {'Variable 1','Variable 2'};
 limits_data = [floor(min(X(:))) ceil(max(X(:)))];
+text_labels_cells{1} = 1:size(X,2); %x-axis cell labels
+text_labels_cells{2} = 1:size(X,1); %y-axis cell labels
 savefig = 1;
 savefig_name = 'heatmap_example6';
 
 % Heatmap figure
-figure;
-figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,...
+figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cells,...
     savefig,savefig_name);
 ```
 ![alt text][heatmap6]
