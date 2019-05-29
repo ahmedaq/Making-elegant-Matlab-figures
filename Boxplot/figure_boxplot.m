@@ -14,8 +14,8 @@ function bh = figure_boxplot(data_input,...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Written by: Ahmed Abdul Quadeer
 % E-mail: ahmedaq@gmail.com
-% Last change: Apr. 24, 2018
-% Copyright (c) Ahmed Abdul Quadeer, 2018
+% Last change: May 29, 2018
+% Copyright (c) Ahmed Abdul Quadeer, 2019
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Inputs:   
@@ -147,6 +147,20 @@ if iscell(data_input) %if input data is in cell form
     no_boxplots = length(data_input);
 else                  %if input data is in matrix form
     no_boxplots = size(data_input,2);
+end
+
+if no_boxplots>9 || isempty(data_input)
+    fprintf('\nWarning: The number of box plots to be plotted is greater than colors in the selected scheme. Using one color for all boxes.')
+end
+
+%Defaults
+box_lineWidth = 0.5;
+box_widths_value = 0.3;
+
+if no_boxplots>9
+   box_color = [0.9020    0.2941    0.2078]; 
+else
+    box_color = color_scheme_npg(1:no_boxplots,:);
 end
 
 %Defaults
@@ -448,10 +462,6 @@ elseif nargin == 23
     fig_height_cm = fig_height_cm_in;
     ylim_min = ylim_min_in;
     ylim_max = ylim_max_in;
-end
-
-if no_boxplots>9 || isempty(data_input)
-    error('Error! The number of box plots to be plotted is greater than colors in the selected scheme. Specify a color vector.')
 end
 
 %% Preprocessing data for plotting
