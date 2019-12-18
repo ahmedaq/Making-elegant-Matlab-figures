@@ -1,4 +1,4 @@
-# Making Elegant Matlab Figures (in progress) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3582848.svg)](https://doi.org/10.5281/zenodo.3582848)
+# Making Elegant Matlab Figures [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3582848.svg)](https://doi.org/10.5281/zenodo.3582848)
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB
 
 ## Table of Contents
