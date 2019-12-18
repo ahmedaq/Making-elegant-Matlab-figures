@@ -1,5 +1,5 @@
 # Making Elegant Matlab Figures [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3582848.svg)](https://doi.org/10.5281/zenodo.3582848)
-A repository comprising multiple functions for making elegant publication-quality figures in MATLAB
+A repository comprising multiple functions for making elegant publication-quality figures in MATLAB.
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
@@ -22,6 +22,7 @@ A repository comprising multiple functions for making elegant publication-qualit
     * [Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes](#example-5-heatmap-of-a-rectangular-matrix-and-automated-saving-of-figure-with-approproate-cell-sizes)    
     * [Example 6: Heatmap of a big data matrix](#example-6-heatmap-of-a-big-data-matrix)    
 *  [Violinplot](#violinplot)
+*  [Citation](#citation)
 
 ## Boxplot
 Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cumbersome due to the large number of required (and somewhat strict in terms of format) inputs. Here, I have written a wrapper code for making nice boxplots quickly and efficiently.
@@ -415,3 +416,25 @@ figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 
 ## Violinplot
 In progress ...
+
+---
+
+## Citation
+If you find this repo useful, please cite it using the following information:
+
+#### Plain Text
+Ahmed Abdul Quadeer. (2019, December 18). ahmedaq/Making-elegant-Matlab-figures: Release v1.0 (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3582848
+
+#### Bibtex
+@software{ahmed_abdul_quadeer_2019_3582848,
+  author       = {Ahmed Abdul Quadeer},
+  title        = {{ahmedaq/Making-elegant-Matlab-figures: Release 
+                   v1.0}},
+  month        = dec,
+  year         = 2019,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.3582848},
+  url          = {https://doi.org/10.5281/zenodo.3582848}
+}
+
