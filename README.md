@@ -1,6 +1,7 @@
 # Making Elegant Matlab Figures [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3582848.svg)](https://doi.org/10.5281/zenodo.3582848)
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB.
 
+&nbsp;
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
@@ -8,6 +9,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 *  [Violinplot](#violinplot)
 *  [Citation](#citation)
 
+&nbsp;
 ## Boxplot
 Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cumbersome due to the large number of required (and somewhat strict in terms of format) inputs. Here, I have written a wrapper code for making nice boxplots quickly and efficiently.
 
@@ -95,8 +97,7 @@ figure_boxplot(data)
 
 </details>
 
-
-
+&nbsp;
 ## GeneratePDF
 
 This is a code to generate nice (properly normalized) probability density function (PDF) plots with minimum amount of input arguments. 
@@ -312,8 +313,7 @@ end
 </details>
 
 
-
-
+&nbsp;
 ## Heatmap
 Generating heatmap in MATLAB using the default function `heatmap.m` (introduced in version 2017a) is quite useful for visualizing the magnitude of elements in matrices. However, the size of the generated heatmaps requires a lot of tweaking to produce a reasonable figure. Here, I have written a wrapper code for making nice appropriate-sized heatmaps quickly and efficiently with minimum input.
 
@@ -491,14 +491,12 @@ figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 </details>
 
 
-
-
+&nbsp;
 ## Violinplot
 In progress ...
 
 
-
-
+&nbsp;
 ## Citation
 If you find this repo useful, please cite it using the following information:
 
