@@ -27,13 +27,12 @@ A repository comprising multiple functions for making elegant publication-qualit
 ## Boxplot
 Generating boxplot in MATLAB using the default function `boxplot.m` is a bit cumbersome due to the large number of required (and somewhat strict in terms of format) inputs. Here, I have written a wrapper code for making nice boxplots quickly and efficiently.
 
+Function: `figure_boxplot.m`
 <details>
   <summary>
     <b> Example 1: Boxplot using only data input and no other specification </b>
   </summary> 
-Function: `figure_boxplot.m`
-
-### Example 1: Boxplot using only data input and no other specification
+   
 ```
 % Number of intended boxes in the figure
 num_boxes = 8;          
@@ -54,7 +53,11 @@ figure_boxplot(data)
 
 </details>
 
-### Example 2: Boxplot using minimum input specifications
+<details>
+  <summary>
+    <b> Example 2: Boxplot using minimum input specifications </b>
+  </summary> 
+
 ```
 % Number of intended boxes in the figure
 num_boxes = 6;          
@@ -77,8 +80,12 @@ figure_boxplot(data,label_axes,label_boxes);
 
 [boxplot2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot2.png "Boxplot example 2"
 
-### Example 3: Boxplot using data input in matrix format
+</details>
 
+<details>
+  <summary>
+    <b> Example 3: Boxplot using data input in matrix format </b>
+  </summary> 
 
 Instead of a cell, the code works even if the input is in matrix form of size *num_samples x num_boxes*. 
 
@@ -101,6 +108,8 @@ figure_boxplot(data)
 ![alt text][boxplot3]
 
 [boxplot3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Boxplot/boxplot3.png "Boxplot example 3"
+
+</details>
 
 ---
 
