@@ -3,24 +3,8 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
-    * [Example 1: Boxplot using only data input and no other specification](#example-1-boxplot-using-only-data-input-and-no-other-specification)
-    * [Example 2: Boxplot using minimum input specifications](#example-2-boxplot-using-minimum-input-specifications)
-    * [Example 3: Boxplot using data input in matrix format](#example-3-boxplot-using-data-input-in-matrix-format)
 *  [GeneratePDF (`generatePDF.m`)](#generatepdf)
-    * [Example 1: Generating PDF with only data input](#example-1-generating-pdf-with-only-data-input)
-    * [Example 2: Generating PDF in a specified color](#example-2-generating-pdf-in-a-specified-color)
-    * [Example 3: Generating PDFs in different styles ](#example-3-generating-pdfs-in-different-styles)
-    * [Example 4: Generating PDFs with specific number of bins](#example-4-generating-pdfs-with-specific-number-of-bins)
-    * [Example 5: Generating overlapping PDFs](#example-5-generating-overlapping-pdfs)
-    * [Example 6: Generating PDFs and saving figures](#example-6-generating-pdfs-and-saving-figures)
-    * [Example 7: Generating overlapping PDFs with different color schemes](#example-7-generating-overlapping-pdfs-with-different-color-schemes)
 *  [Heatmap (`figure_heatmap.m`)](#heatmap)
-    * [Example 1: Heatmap using only data input](#example-1-heatmap-using-only-data-input)
-    * [Example 2: Heatmap using a specific color scheme](#example-2-heatmap-using-a-specific-color-scheme)    
-    * [Example 3: Heatmap with title and labels](#example-3-heatmap-with-title-and-labels)    
-    * [Example 4: Heatmap with cell labels and limits of color scheme specified](#example-4-heatmap-with-cell-labels-and-limits-of-color-scheme-specified)    
-    * [Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes](#example-5-heatmap-of-a-rectangular-matrix-and-automated-saving-of-figure-with-approproate-cell-sizes)    
-    * [Example 6: Heatmap of a big data matrix](#example-6-heatmap-of-a-big-data-matrix)    
 *  [Violinplot](#violinplot)
 *  [Citation](#citation)
 
@@ -111,15 +95,17 @@ figure_boxplot(data)
 
 </details>
 
----
-
 ## GeneratePDF
 
 This is a code to generate nice (properly normalized) probability density function (PDF) plots with minimum amount of input arguments. 
 
 Function: `generatePDF.m`
 
-### Example 1: Generating PDF with only data input
+<details>
+  <summary>
+    <b> Example 1: Generating PDF with only data input </b>
+  </summary> 
+   
 ```
 % Generating random data
 x = randn(1,500); 
@@ -131,7 +117,13 @@ generatePDF(x)
 
 [generatePDF1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF1.png "GeneratePDF example 1"
 
-### Example 2: Generating PDF in a specified color
+</details>
+
+<details>
+  <summary>
+    <b> Example 2: Generating PDF in a specified color </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -151,7 +143,13 @@ title('Specifying a color manually')
 
 [generatePDF2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF2.png "GeneratePDF example 2"
 
-### Example 3: Generating PDFs in different styles 
+</details>
+
+<details>
+  <summary>
+    <b> Example 3: Generating PDFs in different styles  </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -174,7 +172,13 @@ title('Area plot')
 
 [generatePDF3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF3.png "GeneratePDF example 3"
 
-### Example 4: Generating PDFs with specific number of bins
+</details>
+
+<details>
+  <summary>
+    <b> Example 4: Generating PDFs with specific number of bins </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -196,7 +200,13 @@ end
 
 [generatePDF4]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF4.png "GeneratePDF example 4"
 
-### Example 5: Generating overlapping PDFs
+</details>
+
+<details>
+  <summary>
+    <b> Example 5: Generating overlapping PDFs </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -215,7 +225,13 @@ legend('Data 1','Data 2'); legend boxoff
 
 [generatePDF5]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF5.png "GeneratePDF example 5"
 
-### Example 6: Generating PDFs and saving figures
+</details>
+
+<details>
+  <summary>
+    <b> Example 6: Generating PDFs and saving figures </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -240,7 +256,13 @@ generatePDF(x,color_scheme_set1(3,:),'area',no_of_bins,...
 
 [generatePDF6]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF6.png "GeneratePDF example 6"
 
-### Example 7: Generating overlapping PDFs with different color schemes
+</details>
+
+<details>
+  <summary>
+    <b> Example 7: Generating overlapping PDFs with different color schemes </b>
+  </summary> 
+
 ```
 % Loading colors
 run colors_definitions.m
@@ -285,6 +307,8 @@ end
 
 [generatePDF7]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/GeneratePDF/generatePDF7.png "GeneratePDF example 7"
 
+</details>
+
 ---
 ## Heatmap
 Generating heatmap in MATLAB using the default function `heatmap.m` (introduced in version 2017a) is quite useful for visualizing the magnitude of elements in matrices. However, the size of the generated heatmaps requires a lot of tweaking to produce a reasonable figure. Here, I have written a wrapper code for making nice appropriate-sized heatmaps quickly and efficiently with minimum input.
@@ -292,7 +316,11 @@ Generating heatmap in MATLAB using the default function `heatmap.m` (introduced 
 
 Function: `figure_heatmap.m`
 
-### Example 1: Heatmap using only data input
+<details>
+  <summary>
+    <b> Example 1: Heatmap using only data input </b>
+  </summary> 
+
 ```
 % Generating data
 x = randn(10,5);
@@ -305,7 +333,13 @@ figure_heatmap(C);
 
 [heatmap1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example1.png "Heatmap example 1"
 
-### Example 2: Heatmap using a specific color scheme
+</details>
+
+<details>
+  <summary>
+    <b> Example 2: Heatmap using a specific color scheme </b>
+  </summary> 
+
 ```
 %Using data of example 1
 
@@ -320,7 +354,13 @@ figure_heatmap(C,colorscheme);
 
 [heatmap2]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example2.png "Heatmap example 2"
 
-### Example 3: Heatmap with title and labels
+</details>
+
+<details>
+  <summary>
+    <b> Example 3: Heatmap with title and labels </b>
+  </summary> 
+
 ```
 %Using data of example 1
 
@@ -337,7 +377,13 @@ figure_heatmap(C,colorscheme,text_title,text_labels);
 
 [heatmap3]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example3.png "Heatmap example 3"
 
-### Example 4: Heatmap with cell labels and limits of color scheme specified
+</details>
+
+<details>
+  <summary>
+    <b> Example 4: Heatmap with cell labels and limits of color scheme specified </b>
+  </summary> 
+
 ```
 %Using data of example 1
 
@@ -357,7 +403,13 @@ figure_heatmap(C,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 
 [heatmap4]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example4.png "Heatmap example 4"
 
-### Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes
+</details>
+
+<details>
+  <summary>
+    <b> Example 5: Heatmap of a rectangular matrix and automated saving of figure with approproate cell sizes </b>
+  </summary> 
+
 ```
 % Generating rectangular matrix data
 X = randn(10,6);
@@ -403,7 +455,13 @@ figure_heatmap(Y,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 
 [heatmap5b]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example5b.png "Heatmap example 5b"
 
-### Example 6: Heatmap of a big data matrix 
+</details>
+
+<details>
+  <summary>
+    <b> Example 6: Heatmap of a big data matrix  </b>
+  </summary> 
+
 ```
 % Generating rectangular matrix data
 X = randn(15,50);
@@ -425,6 +483,8 @@ figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 ![alt text][heatmap6]
 
 [heatmap6]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/Heatmap/heatmap_example6.png "Heatmap example 6"
+
+</details>
 
 ---
 
