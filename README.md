@@ -95,6 +95,8 @@ figure_boxplot(data)
 
 </details>
 
+
+
 ## GeneratePDF
 
 This is a code to generate nice (properly normalized) probability density function (PDF) plots with minimum amount of input arguments. 
@@ -309,7 +311,9 @@ end
 
 </details>
 
----
+
+
+
 ## Heatmap
 Generating heatmap in MATLAB using the default function `heatmap.m` (introduced in version 2017a) is quite useful for visualizing the magnitude of elements in matrices. However, the size of the generated heatmaps requires a lot of tweaking to produce a reasonable figure. Here, I have written a wrapper code for making nice appropriate-sized heatmaps quickly and efficiently with minimum input.
 
@@ -486,12 +490,14 @@ figure_heatmap(X,colorscheme,text_title,text_labels,limits_data,text_labels_cell
 
 </details>
 
----
+
+
 
 ## Violinplot
 In progress ...
 
----
+
+
 
 ## Citation
 If you find this repo useful, please cite it using the following information:
