@@ -1,6 +1,10 @@
 # Making Elegant Matlab Figures [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3582848.svg)](https://doi.org/10.5281/zenodo.3582848)
 A repository comprising multiple functions for making elegant publication-quality figures in MATLAB.
 
+![alt text][boxplot1]
+
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/CoverPhoto.png "Cover"
+
 &nbsp;
 ## Table of Contents
 *  [Boxplot (`figure_boxplot.m`)](#boxplot)
