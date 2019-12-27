@@ -3,7 +3,7 @@ A repository comprising multiple functions for making elegant publication-qualit
 
 ![alt text][boxplot1]
 
-[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/CoverPhoto.png "Cover"
+[boxplot1]: https://github.com/ahmedaq/Making-elegant-Matlab-figures/blob/master/CoverPhoto2.png "Cover"
 
 &nbsp;
 ## Table of Contents
